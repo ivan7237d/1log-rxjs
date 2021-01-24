@@ -10,7 +10,7 @@
 
 Assuming you have RxJS installed,
 
-1. [Install `1log`](https://github.com/ivan7237d/1log#installing).
+1. [Install 1log](https://github.com/ivan7237d/1log#installing).
 
 2. Install the npm package:
 
