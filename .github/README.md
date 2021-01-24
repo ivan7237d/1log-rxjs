@@ -54,6 +54,10 @@ timer(500).pipe(log).subscribe();
 
 <img src="https://github.com/ivan7237d/1log-rxjs/raw/master/images/basic.png" alt="screenshot">
 
+> :bulb: TIP
+>
+> This plugin logs `Observable`s but not instances of classes inheriting from `Observable`. If you need to log a subject, first convert it to an observable using `asObservable` method.
+
 ## Usage in tests
 
 ```ts
