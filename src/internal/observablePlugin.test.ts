@@ -18,7 +18,7 @@ test('basic usage', () => {
     [create 1] [subscribe 1] [next] +500ms 0
     · [next] +0ms 0
     [create 1] [subscribe 1] [complete] +0ms
-    · [complete] +0ms [Function]
+    · [complete] +0ms
     · [create 1] [subscribe 1] [unsubscribe] +0ms
   `);
 

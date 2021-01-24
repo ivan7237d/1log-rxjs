@@ -2,12 +2,12 @@
 # yarn lockfile v1
 
 
-"1log@1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/1log/-/1log-1.0.1.tgz#2a8c3a73bbde09ffb71ad7eed82407d7fa77f2e6"
-  integrity sha512-td+xZA2sUB6klFsMcv2cBhjtBy6SZT65sLnUsGlvjBPnBvU9qbXXO79mgPK18GdWYLWHtlkLTI9fBbFvfkVz8A==
+"1log@2.1.0":
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/1log/-/1log-2.1.0.tgz#859a89168238d6f95ce17faaaf5aa9f4f006bfe9"
+  integrity sha512-4YJVxchEfz+jpDzmUUrEglbpW3AWvj2giTe1QLjqtfJTMlEfsmciFAuhZVKX39KG74L//VM0FUtuwDPODXEOBg==
   dependencies:
-    antiutils "^2.2.0"
+    antiutils "^3.0.0"
 
 "@babel/code-frame@^7.0.0", "@babel/code-frame@^7.10.4", "@babel/code-frame@^7.12.11":
   version "7.12.11"
@@ -1443,6 +1443,11 @@ antiutils@^2.2.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/antiutils/-/antiutils-2.2.0.tgz#065f03239c2271a260b407f5e00e3c746f63774c"
   integrity sha512-dj+zQVjyRsKMiPdRNZHx7r3dGVC/GJTa3wGz+lNdIJFG0s2/hRy/OqB5lYThOOh0QMOJ0BjRLLNsbtLVVuOOzQ==
+
+antiutils@^3.0.0:
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/antiutils/-/antiutils-3.0.2.tgz#110f69a958672f1d1203b6eec6b9566e54f6ebc9"
+  integrity sha512-u6pDlI9/lSlY4uuCaAwnQZZbSUMmBaGpREU5tD3yiHWpFO2UpB6jy/ARqpmxs14jFk3WrylaK4t32bECT7/xNg==
 
 anymatch@^2.0.0:
   version "2.0.0"

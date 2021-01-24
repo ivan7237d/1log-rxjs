@@ -1,9 +1,10 @@
-import { installPlugin } from '1log';
-import { isObservable } from 'rxjs';
+import { installPlugins } from '1log';
+import { Observable } from 'rxjs';
 import { observablePlugin } from '../..';
 
 expect.addSnapshotSerializer({
-  test: isObservable,
+  test: (value) =>
+    value !== null && value !== undefined && value.constructor === Observable,
   serialize: () => `[Observable]`,
 });
-installPlugin(observablePlugin);
+installPlugins(observablePlugin);
