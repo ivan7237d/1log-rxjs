@@ -66,7 +66,7 @@ timer(500).pipe(log).subscribe();
 
 > :bulb: TIP
 >
-> In Chrome, you can right-click an observable or a subscriber from a create/subscribe log message and say "Store as global variable". The object will be stored with a name like `temp1`, and you'll be able to run `temp1.subscribe()` (observable) or `temp1.next(yourValue)`/`temp1.error(yourError)`/`temp1.complete()` (subscriber).
+> In Chrome, you can right-click an observable or a subscriber from a create/subscribe log message and say "Store as global variable". The object will be stored with a name like `temp1`, and you'll be able to run `temp1.subscribe()` (observable) or `temp1.next(yourValue)` / `temp1.error(yourError)` / `temp1.complete()` (subscriber).
 
 ## Usage in tests
 
