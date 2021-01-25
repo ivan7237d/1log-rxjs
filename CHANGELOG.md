@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0](https://github.com/ivan7237d/1log-rxjs/compare/v2.0.0...v3.0.0) (2021-01-25)
+
+
+### ⚠ BREAKING CHANGES
+
+* snapshots now include [Subscriber]
+
+### Features
+
+* log subscribers ([097c461](https://github.com/ivan7237d/1log-rxjs/commit/097c461738ed7f3aa0b76edacb24d72f33ea5906))
+
 ## [2.0.0](https://github.com/ivan7237d/1log-rxjs/compare/v1.0.1...v2.0.0) (2021-01-24)
 
 
