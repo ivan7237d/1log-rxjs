@@ -40,6 +40,12 @@ Assuming you have RxJS installed,
      serialize: () => `[Observable]`,
    });
 
+   // Add a serializer for subscribers.
+   expect.addSnapshotSerializer({
+     test: (value) => value instanceof Subscriber,
+     serialize: () => `[Subscriber]`,
+   });
+
    installPlugins(observablePlugin);
    ```
 
@@ -58,6 +64,10 @@ timer(500).pipe(log).subscribe();
 >
 > This plugin logs `Observable`s but not instances of classes inheriting from `Observable`. If you need to log a subject, first convert it to an observable using `asObservable` method.
 
+> :bulb: TIP
+>
+> In Chrome, you can right-click an observable or a subscriber from a create/subscribe log message and say "Store as global variable". The object will be stored with a name like `temp1`, and you'll be able to run `temp1.subscribe()` (observable) or `temp1.next(yourValue)`/`temp1.error(yourError)`/`temp1.complete()` (subscriber).
+
 ## Usage in tests
 
 ```ts
@@ -69,7 +79,7 @@ test('timer', () => {
   jest.runAllTimers();
   expect(getMessages()).toMatchInlineSnapshot(`
     [create 1] +0ms [Observable]
-    [create 1] [subscribe 1] +0ms
+    [create 1] [subscribe 1] +0ms [Subscriber]
     [create 1] [subscribe 1] [next] +500ms 0
     [create 1] [subscribe 1] [complete] +0ms
     · [create 1] [subscribe 1] [unsubscribe] +0ms

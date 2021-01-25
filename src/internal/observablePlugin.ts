@@ -40,7 +40,7 @@ class LogObservableOperator<T> implements Operator<T, T> {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     (subscriber: Subscriber<T>, source: any): TeardownLogic => {
       const logWithSubscribe = this.addSubscribeBadge(this.log);
-      logWithSubscribe([]);
+      logWithSubscribe([], subscriber);
       const logObservableSubscriber = new LogObservableSubscriber(
         subscriber,
         logWithSubscribe,
