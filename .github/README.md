@@ -58,7 +58,7 @@ import { timer } from 'rxjs';
 timer(500).pipe(log).subscribe();
 ```
 
-<img src="https://github.com/ivan7237d/1log-rxjs/raw/master/images/basic.png" alt="screenshot">
+<img src="https://github.com/ivan7237d/1log-rxjs/raw/master/images/basic-adjusted.png" alt="screenshot">
 
 > :bulb: TIP
 >
@@ -86,6 +86,10 @@ test('timer', () => {
   `);
 });
 ```
+
+> :bulb: TIP
+>
+> In older versions of RxJS you had to use `TestScheduler` in tests, but since version 6.2.1, RxJS works well with Jest's fake time.
 
 ---
 
