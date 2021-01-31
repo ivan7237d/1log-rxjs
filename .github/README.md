@@ -4,7 +4,7 @@
 [![gzip size](https://badgen.net/bundlephobia/minzip/1log-rxjs?color=green)](https://bundlephobia.com/result?p=1log-rxjs)
 [![tree shaking](https://badgen.net/bundlephobia/tree-shaking/1log-rxjs)](https://bundlephobia.com/result?p=1log-rxjs)
 
-[1log](https://github.com/ivan7237d/1log) plugin for logging [RxJS](https://rxjs-dev.firebaseapp.com/guide/overview) observables.
+[1log](https://github.com/ivan7237d/1log) plugin for logging [RxJS](https://rxjs-dev.firebaseapp.com/guide/overview) observables. Please see an article _[Log and test RxJS observables with 1log](https://www.obvibase.com/dev-blog/log-and-test-rxjs-observables-with-1log)_ for an introduction.
 
 ## Installing
 
