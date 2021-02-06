@@ -1,6 +1,6 @@
 {
   "name": "1log-rxjs",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "1log plugin for logging RxJS observables",
   "main": "build/main/index.js",
   "typings": "build/main/index.d.ts",
