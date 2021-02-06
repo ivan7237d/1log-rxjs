@@ -9,6 +9,8 @@
   "repository": "https://github.com/ivan7237d/1log-rxjs.git",
   "license": "MIT",
   "keywords": [
+    "1log",
+    "plugin",
     "rxjs",
     "observable",
     "log",
