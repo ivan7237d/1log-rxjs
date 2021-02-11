@@ -2,12 +2,12 @@
 # yarn lockfile v1
 
 
-"1log@2.1.3":
-  version "2.1.3"
-  resolved "https://registry.yarnpkg.com/1log/-/1log-2.1.3.tgz#873a99e7bc9249cf5aeb785d403f28ca1a704050"
-  integrity sha512-Fk2S0w3bWUgvmhV1hcdWE8Gf69C2V/mKxldmovl4otxe4CeLHugaefGizuhZmXIDu2Wg0xlW74IgurbeIF+ZtQ==
+"1log@2.1.4":
+  version "2.1.4"
+  resolved "https://registry.yarnpkg.com/1log/-/1log-2.1.4.tgz#41a5074eff69a9df158483c330e5b4bbe2a9b550"
+  integrity sha512-5BaYCEnWJ2r6Pu2zsskbiLuSycarwRsfaidq0MUSpWM/nYnqNIOr/R1rG0B1nSYq2xrjz/9qdD+zMyd73aVwJg==
   dependencies:
-    antiutils "^3.0.0"
+    antiutils "^3.0.5"
 
 "@babel/code-frame@^7.0.0", "@babel/code-frame@^7.10.4", "@babel/code-frame@^7.12.11":
   version "7.12.11"
@@ -1629,15 +1629,10 @@ ansi-styles@^4.0.0, ansi-styles@^4.1.0:
   dependencies:
     color-convert "^2.0.1"
 
-antiutils@^3.0.0:
-  version "3.0.2"
-  resolved "https://registry.yarnpkg.com/antiutils/-/antiutils-3.0.2.tgz#110f69a958672f1d1203b6eec6b9566e54f6ebc9"
-  integrity sha512-u6pDlI9/lSlY4uuCaAwnQZZbSUMmBaGpREU5tD3yiHWpFO2UpB6jy/ARqpmxs14jFk3WrylaK4t32bECT7/xNg==
-
-antiutils@^3.0.4:
-  version "3.0.4"
-  resolved "https://registry.yarnpkg.com/antiutils/-/antiutils-3.0.4.tgz#619dd3fb0fed9cf7334e81b53db454ff952ec743"
-  integrity sha512-AuUbv2+tkoLDxiCyMZ62gwamc5UiAOQYPCRc3UGmHjR2KInu+gd/yOvs4Qh2LLwzyzh0zbKfXMKIhjEwniPJzQ==
+antiutils@^3.0.5:
+  version "3.0.5"
+  resolved "https://registry.yarnpkg.com/antiutils/-/antiutils-3.0.5.tgz#6a3039fe60dd3b86f91105b4a6a651268deacd3d"
+  integrity sha512-axGBBdxGk1FM2UztW/81HsuWzkljUHvBmFXvG5eJlhP8vFL4j9s9Drex1xNl8Kq0JeBCIHxYziPeWlOWCaRUOA==
 
 anymatch@^2.0.0:
   version "2.0.0"
