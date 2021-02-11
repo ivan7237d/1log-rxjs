@@ -5,6 +5,6 @@
 [![types](https://img.shields.io/npm/types/1log-rxjs?color=brightgreen)](https://www.npmjs.com/package/1log-rxjs)
 [![coverage status](https://coveralls.io/repos/github/ivan7237d/1log-rxjs/badge.svg?branch=master)](https://coveralls.io/github/ivan7237d/1log-rxjs?branch=master)
 
-[1log](https://github.com/ivan7237d/1log) plugin for logging RxJS observables. In addition to logging nexts, errors, and completions, this plugin creates log messages when an observable is created, subscribed, or unsubbed. When an observable is subscribed multiple times, numbered badges let you attribute each next, error, completion, or unsubscription to a specific subscription. The plugin can also be used in combination with Jest's snapshots feature to test observables by creating snapshots of log messages.
+[1log](https://github.com/ivan7237d/1log) plugin for logging RxJS observables. Different events in the lifecycle of an observable are marked with colored badges. Observables and subscriptions are assigned numbers, and these numbers let you tell which subscription a specific next/error/completion/unsub applies to. Log messages include time deltas and use indentation to show synchronous stack level. Besides logging to the console, you can use this plugin to test observables by creating snapshots of log messages in Jest tests.
 
-Please refer to the [GitHub README](https://github.com/ivan7237d/1log-rxjs#readme) for full documentation.
+Please refer to the [GitHub README](https://github.com/ivan7237d/1log-rxjs#readme) for full documentation and screenshots.
