@@ -10,6 +10,16 @@
 
 ## Installing
 
+> :bulb: TIP
+>
+> If you just need to quickly install the library to play around with it, install packages `1log` and `1log-rxjs` and add the following imports:
+>
+> ```ts
+> import '1log/defaultConfig';
+> import '1log-rxjs/defaultConfig';
+> import { log } from '1log';
+> ```
+
 Assuming you have RxJS installed,
 
 1. [Install 1log](https://github.com/ivan7237d/1log#installing).
