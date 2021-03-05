@@ -72,7 +72,7 @@
     "typescript": "4.1.5"
   },
   "peerDependencies": {
-    "1log": "^2.1.0",
+    "1log": "^2.1.0 || 3.x",
     "rxjs": "6.x || 7.x"
   },
   "files": [
