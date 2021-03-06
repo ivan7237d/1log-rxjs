@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.0.0](https://github.com/ivan7237d/1log-rxjs/compare/v3.1.0...v4.0.0) (2021-03-06)
+
+
+### ⚠ BREAKING CHANGES
+
+* now that "next" badges are numbered, you may need to update Jest snapshots
+
+### Features
+
+* numbered "next" badges ([e508b92](https://github.com/ivan7237d/1log-rxjs/commit/e508b92758c9e5d81bbd97f8aae9ac42e953fb44))
+
 ## [3.1.0](https://github.com/ivan7237d/1log-rxjs/compare/v3.0.3...v3.1.0) (2021-03-05)
 
 
