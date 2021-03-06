@@ -92,7 +92,7 @@ test('timer', () => {
   expect(getMessages()).toMatchInlineSnapshot(`
     [create 1] +0ms [Observable]
     [create 1] [subscribe 1] +0ms [Subscriber]
-    [create 1] [subscribe 1] [next] +500ms 0
+    [create 1] [subscribe 1] [next 1] +500ms 0
     [create 1] [subscribe 1] [complete] +0ms
     · [create 1] [subscribe 1] [unsubscribe] +0ms
   `);
