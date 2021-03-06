@@ -45,7 +45,7 @@
     "node": ">=14"
   },
   "dependencies": {
-    "antiutils": "^3.0.5"
+    "antiutils": "^3.1.0"
   },
   "devDependencies": {
     "1log": "2.1.4",

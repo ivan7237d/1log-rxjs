@@ -1,5 +1,5 @@
 import { badgePlugin, getMessages, log } from '1log';
-import { applyPipe } from 'antiutils';
+import { pipe } from 'antiutils';
 import { EMPTY, from, throwError, timer } from 'rxjs';
 import { catchError, concatAll } from 'rxjs/operators';
 
@@ -15,7 +15,7 @@ test('basic usage', () => {
   expect(getMessages()).toMatchInlineSnapshot(`
     [create 1] +0ms [Observable]
     [create 1] [subscribe 1] +0ms [Subscriber]
-    [create 1] [subscribe 1] [next] +500ms 0
+    [create 1] [subscribe 1] [next 1] +500ms 0
     · [next] +0ms 0
     [create 1] [subscribe 1] [complete] +0ms
     · [complete] +0ms
@@ -38,25 +38,27 @@ test('basic usage', () => {
   `);
 });
 
-test('multiple subscriptions', () => {
-  const observable = applyPipe(from([1]), log);
+test('multiple subscriptions and nexts', () => {
+  const observable = pipe(from([1, 2]), log);
   observable.subscribe();
   observable.subscribe();
   expect(getMessages()).toMatchInlineSnapshot(`
     [create 1] +0ms [Observable]
     [create 1] [subscribe 1] +0ms [Subscriber]
-    · [create 1] [subscribe 1] [next] +0ms 1
+    · [create 1] [subscribe 1] [next 1] +0ms 1
+    · [create 1] [subscribe 1] [next 2] +0ms 2
     · [create 1] [subscribe 1] [complete] +0ms
     · · [create 1] [subscribe 1] [unsubscribe] +0ms
     [create 1] [subscribe 2] +0ms [Subscriber]
-    · [create 1] [subscribe 2] [next] +0ms 1
+    · [create 1] [subscribe 2] [next 1] +0ms 1
+    · [create 1] [subscribe 2] [next 2] +0ms 2
     · [create 1] [subscribe 2] [complete] +0ms
     · · [create 1] [subscribe 2] [unsubscribe] +0ms
   `);
 });
 
 test('stack level', () => {
-  const observable = applyPipe(
+  const observable = pipe(
     from([[1], throwError(2)]),
     concatAll(),
     log,
@@ -69,8 +71,8 @@ test('stack level', () => {
     [create 2] +0ms [Observable]
     [create 2] [subscribe 1] +0ms [Subscriber]
     · [create 1] [subscribe 1] +0ms [Subscriber]
-    · · [create 1] [subscribe 1] [next] +0ms 1
-    · · · [create 2] [subscribe 1] [next] +0ms 1
+    · · [create 1] [subscribe 1] [next 1] +0ms 1
+    · · · [create 2] [subscribe 1] [next 1] +0ms 1
     · · [create 1] [subscribe 1] [error] +0ms 2
     · · · [create 1] [subscribe 1] [unsubscribe] +0ms
     · · · [create 2] [subscribe 1] [complete] +0ms

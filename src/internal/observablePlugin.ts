@@ -9,7 +9,7 @@ import {
   PluginType,
   ProxyPlugin,
 } from '1log';
-import { applyPipe } from 'antiutils';
+import { pipe } from 'antiutils';
 import { Observable, Operator, Subscriber, TeardownLogic } from 'rxjs';
 
 /**
@@ -45,7 +45,7 @@ class LogObservableOperator<T> implements Operator<T, T> {
         subscriber,
         logWithSubscribe,
       );
-      return applyPipe(
+      return pipe(
         () => source.subscribe(logObservableSubscriber),
         includeInTimeDelta,
         increaseStackLevel,
@@ -55,19 +55,19 @@ class LogObservableOperator<T> implements Operator<T, T> {
 }
 
 class LogObservableSubscriber<T> extends Subscriber<T> {
+  addNextBadge: (log: PluginLogger) => PluginLogger;
+
   constructor(
     destination: Subscriber<T>,
     private logWithSubscribe: PluginLogger,
   ) {
     super(destination);
+    this.addNextBadge = addNumberedBadge('next', logPalette.yellow);
   }
 
   protected _next = excludeFromTimeDelta((value: T) => {
-    this.logWithSubscribe(
-      [{ caption: `next`, color: logPalette.yellow }],
-      value,
-    );
-    applyPipe(
+    this.addNextBadge(this.logWithSubscribe)([], value);
+    pipe(
       () => this.destination.next?.(value),
       includeInTimeDelta,
       increaseStackLevel,
@@ -77,7 +77,7 @@ class LogObservableSubscriber<T> extends Subscriber<T> {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   protected _error = excludeFromTimeDelta((error: any) => {
     this.logWithSubscribe([{ caption: `error`, color: logPalette.red }], error);
-    applyPipe(
+    pipe(
       () => this.destination.error?.(error),
       includeInTimeDelta,
       increaseStackLevel,
@@ -86,7 +86,7 @@ class LogObservableSubscriber<T> extends Subscriber<T> {
 
   protected _complete = excludeFromTimeDelta(() => {
     this.logWithSubscribe([{ caption: `complete`, color: logPalette.orange }]);
-    applyPipe(
+    pipe(
       () => this.destination.complete?.(),
       includeInTimeDelta,
       increaseStackLevel,
@@ -98,11 +98,7 @@ class LogObservableSubscriber<T> extends Subscriber<T> {
       this.logWithSubscribe([
         { caption: `unsubscribe`, color: logPalette.purple },
       ]);
-      applyPipe(
-        () => super.unsubscribe(),
-        includeInTimeDelta,
-        increaseStackLevel,
-      )();
+      pipe(() => super.unsubscribe(), includeInTimeDelta, increaseStackLevel)();
     }
   });
 }

@@ -1634,6 +1634,11 @@ antiutils@^3.0.5:
   resolved "https://registry.yarnpkg.com/antiutils/-/antiutils-3.0.5.tgz#6a3039fe60dd3b86f91105b4a6a651268deacd3d"
   integrity sha512-axGBBdxGk1FM2UztW/81HsuWzkljUHvBmFXvG5eJlhP8vFL4j9s9Drex1xNl8Kq0JeBCIHxYziPeWlOWCaRUOA==
 
+antiutils@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/antiutils/-/antiutils-3.1.0.tgz#2bc31913722ca9ffe22d006b1a5395294ea5013c"
+  integrity sha512-B0Le14U9Ho4uGVZ+hqYI/wOkdig7ee2e7A/0XK3EgikMDcb2kHiYdwBxKhp95gQftfwfJhCYVCoQjKYqXFL8og==
+
 anymatch@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/anymatch/-/anymatch-2.0.0.tgz#bcb24b4f37934d9aa7ac17b4adaf89e7c76ef2eb"
