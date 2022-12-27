@@ -1,3 +1,7 @@
+> **Warning**
+>
+> This package has been deprecated in favor of [1log/rxjs](https://github.com/ivan7237d/1log/tree/master/packages/rxjs).
+
 # 1log-rxjs
 
 [![npm version](https://img.shields.io/npm/v/1log-rxjs.svg?style=flat&color=brightgreen)](https://www.npmjs.com/package/1log-rxjs)
